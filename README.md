@@ -157,36 +157,31 @@ Enable Cloud Build API
 Enable Cloud Source Repositories API
 Enable Identity and Access Management API
 Enable Cloud Run and Service Accounts in Cloud Build - Service account permissions
+
+Configure Continuous Deployment
+Branch: 
+Build type: Dockerfile
+
 Check line in Dockerfile reads:
 `COPY package*.json ./`
 
 # Shopalot
 
+## Functionality
 
-Choose Meals
-Needs meal amount, increase decrease button
-lunch v dinner? v breakfast
-add allergy, spiciness, gluten icons
-
-Planned Meals plus amount per meal
-Submit button
-
-Ingredients per meal
-
-Shopping List
-multiple ingredients formed into a unified shopping list
+Add ingredients to shopping list by increasing/decreasing the amount required.
 
 ## TODO:
 
-~~get increment to be instant instead of one behind~~
-~~add meals to an array so they don't overwrite each other~~
-~~display recipe ingredients~~
-~~Don't display ingredients more than once~~
-~~Input recipes via a text file not hard coded~~
-~~Add icons as bools to the recipe~~
-~~Planned meals only show up if over 0~~
-~~Put ingredients into supermarket aisle friendly categories~~
-~~Only show ingredients if amount is above zero~~
+- ~~get increment to be instant instead of one behind~~
+- ~~add meals to an array so they don't overwrite each other~~
+- ~~display recipe ingredients~~
+- ~~Don't display ingredients more than once~~
+- ~~Input recipes via a text file not hard coded~~
+- ~~Add icons as bools to the recipe~~
+- ~~Planned meals only show up if over 0~~
+- ~~Put ingredients into supermarket aisle friendly categories~~
+- ~~Only show ingredients if amount is above zero~~
 - Page to look nice
 - Final list to be easy to read
 - Is there a memory leak with the useEffect dependency array?
@@ -195,3 +190,5 @@ multiple ingredients formed into a unified shopping list
 - check brown sugar units
 - check ginger units
 - populate data
+- make buttons slightly bigger
+- submit button that disables meal edit buttons
