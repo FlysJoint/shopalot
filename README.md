@@ -69,24 +69,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-Shopalot
 
-Set up Github repo
+## Set up Github repo
 
 
-Deploy in GCP
+## Deploy in GCP
 
+### Cloud Console
 Create Project in GCP account
 Project ID: shopalot-407910
 Enable Container Registry API
-<!-- Enable Cloud Storage API
-Enable App Engine Admin API -->
 
+### Dockerfile
 Dockerfile
 `FROM node:16.15.1 as build
 WORKDIR /shopalot
 
-COPY package*.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
 
@@ -123,6 +122,7 @@ http {
   }
 }`
 
+### Terminal
 `gcloud auth login`
 `gcloud config set project shopalot-407910`
 
@@ -136,6 +136,8 @@ Tag image
 Push to Google repository
 `docker push gcr.io/shopalot-407910/shopalot`
 
+
+### Cloud Console
 GCP -> Container registry
 See shopalot there
 
@@ -149,12 +151,16 @@ Click create
 
 Click the url to see the live app
 
-CICD
+## CICD
 
 Enable Cloud Build API
 Enable Cloud Source Repositories API
 Enable Identity and Access Management API
 Enable Cloud Run and Service Accounts in Cloud Build - Service account permissions
+Check line in Dockerfile reads:
+`COPY package*.json ./`
+
+# Shopalot
 
 
 Choose Meals
@@ -170,7 +176,7 @@ Ingredients per meal
 Shopping List
 multiple ingredients formed into a unified shopping list
 
-TODO:
+## TODO:
 
 ~~get increment to be instant instead of one behind~~
 ~~add meals to an array so they don't overwrite each other~~
@@ -181,10 +187,11 @@ TODO:
 ~~Planned meals only show up if over 0~~
 ~~Put ingredients into supermarket aisle friendly categories~~
 ~~Only show ingredients if amount is above zero~~
-Page to look nice
-Final list to be easy to read
-Is there a memory leak with the useEffect dependency array?
-Justify ingredients
-Add a meal picture (and have a default image)
-check brown sugar units
-check ginger units
+- Page to look nice
+- Final list to be easy to read
+- Is there a memory leak with the useEffect dependency array?
+- Justify ingredients
+- Add a meal picture (and have a default image)
+- check brown sugar units
+- check ginger units
+- populate data

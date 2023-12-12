@@ -12,11 +12,6 @@ function MealPlanner() {
         setMeals((prev) => [...prev.filter(name => !name.includes(meals[0])), meals]);
     };
 
-    // useEffect(() => {
-    //     setMealChange(() => mealAmount);
-    //     mealUpdate();
-    // }, [mealAmount]);
-
     return (
         <div>
             <h1>Choose your meals</h1>
@@ -32,11 +27,16 @@ function MealPlanner() {
                     <td>
                         <Meal spicy={true} nuts={false} gluten={false} name='Chicken Fajitas'  mealplan={mealplan}/>
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <Meal spicy={false} nuts={false} gluten={false} name='Carnitas' mealplan={mealplan}/>
                     </td>
                     <td>
                         <Meal spicy={false} nuts={false} gluten={false} name='Lentil & bacon soup' mealplan={mealplan}/>
+                    </td>
+                    <td>
+                        
                     </td>
                 </tr>
                 <tr>
