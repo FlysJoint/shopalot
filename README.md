@@ -154,6 +154,7 @@ CICD
 Enable Cloud Build API
 Enable Cloud Source Repositories API
 Enable Identity and Access Management API
+Enable Cloud Run and Service Accounts in Cloud Build - Service account permissions
 
 
 Choose Meals
