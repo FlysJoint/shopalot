@@ -41,9 +41,7 @@ function Ingredients(props) {
 
         return (ingredients).map( (ingredient) => {
             return (
-                // <div>
-                    <p>{ingredient[1] > 0 && ingredient[0] + ' x ' + ingredient[1] + ' ' + ingredient[2]}</p>
-                // </div>
+                <p>{ingredient[1] > 0 && ingredient[0] + ' x ' + ingredient[1] + ' ' + ingredient[2]}</p>
             )
         })
     }
