@@ -71,6 +71,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Shopalot
 
+Set up Github repo
+
+
 Deploy in GCP
 
 Create Project in GCP account
@@ -145,6 +148,11 @@ Set port 80 from Container tab
 Click create
 
 Click the url to see the live app
+
+CICD
+
+Enable Cloud Build API
+Enable Cloud Source Repositories API
 
 
 Choose Meals
