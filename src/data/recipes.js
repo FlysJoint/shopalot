@@ -1,0 +1,83 @@
+const recipes = {
+    "Chicken Pathia": [
+        ["ghee", 2, 'dairy', 'tbsp'],
+        ["chicken", 3, 'meat', 'breasts'],
+        ["onion", 3, "veg", 'whole'],
+        ["garlic", 3, 'spices', 'cloves'],
+        ["red chilli", 2, "veg", 'whole'],
+        ["tomato puree", 1, 'tins', 'tbsp'],
+        ["curry powder", 3, 'spices', 'tbsp'],
+        ["chopped tomatoes", 1, 'tins', 'tins'],
+        ["brown sugar", 0.5, 'baking', 'tsp'],
+        ["lime", 0.5, 'veg', 'whole'],
+        ["salt", 0.25, 'spices', 'tsp'],
+        ["birds eye chillies", 2, 'veg', 'whole'],
+        ["coriander", 1, 'veg', 'handful'],
+        ["non green pepper", 1, 'veg', 'whole']
+    ],
+    "Lentil Curry": [
+        ["red lentils", 500, 'tins', 'grams'],
+        ["butter", 50, 'dairy', 'grams'],
+        ["garlic", 4, 'spices', 'cloves'],
+        ["onion", 2, 'veg', 'whole'],
+        ["non green pepper", 1, 'veg', 'whole'],
+        ["ginger", 1.5, 'spices', 'tbsp'],
+        ["curry powder", 2, 'spices', 'tbsp'],
+        ["turmeric", 0.5, 'spices', 'tsp'],
+        ["cayenne", 0.5, 'spices', 'tsp'],
+        ["salt", 1.25, 'spices', 'tsp'],
+        ["black pepper", 0.25, 'spices', 'tsp'],
+        ["coconut milk", 1, 'tins', 'tins'],
+        ["chopped tomatoes", 1, 'tins', 'tins'],
+        ["coriander", 1, 'veg', 'tins'],
+        ["flaked almonds", 2, 'baking', 'tbsp']
+    ],
+    "Chicken Fajitas": [
+        ["chicken", 2, 'meat', 'breasts'],
+        ["rapeseed oil", 1, 'condiments', 'tbsp'],
+        ["non green pepper", 2, 'veg', 'whole'],
+        ["red onion", 2, 'veg', 'whole'],
+        ["cherry tomatoes", 6, "veg", 'whole'],
+        ["coriander", 2, 'veg', 'handfuls'],
+        ["greek yoghurt", 8, 'dairy', 'tbsp'],
+        ["salsa", 6, 'condiments', 'tbsp'],
+        ["mature cheddar", 50, 'dairy', 'grams'],
+        ["tortilla", 8, 'bakery', 'whole'],
+        ["cornflour", 1, 'condiments', 'tbsp'],
+        ["chilli powder", 2, 'spices', 'tsp'],
+        ["salt", 1, 'spices', 'tsp'],
+        ["paprika", 1, 'spices', 'tsp'],
+        ["brown sugar", 1, 'baking', 'tsp'],
+        ["onion powder", 0.5, 'spices', 'tsp'],
+        ["garlic powder", 0.25, 'spices', 'tsp'],
+        ["cayenne", 0.25, 'spices', 'tsp'],
+        ["ground cumin", 0.25, 'spices', 'tsp'],
+        ["jalapenos", 1, 'veg', 'whole']
+    ],
+    "Carnitas": [
+        ["pork shoulder", 2000, 'meat', 'grams'],
+        ["salt", 2.5, 'spices', 'tsp'],
+        ["black pepper", 1, 'spices', 'tsp'],
+        ["onion", 1, 'veg', 'whole'],
+        ["jalapeno", 1, 'veg', 'whole'],
+        ["garlic", 4, 'spices', 'cloves'],
+        ["orange juice", 0.75, 'drinks', 'cups'],
+        ["oregano", 3, 'spices', 'tsp'],
+        ["cumin", 2, 'spices', 'tsp'],
+        ["olive oil", 1, "condiments", 'tbsp']
+    ],
+    "Lentil & bacon soup": [
+        ['olive oil', 1, 'condiments', 'tbsp'],
+        ['onion', 1, 'veg', 'whole'],
+        ['pancetta', 300, 'meat', 'grams'],
+        ['carrots', 250, 'veg', 'grams'],
+        ['cumin', 1, 'spices', 'tsp'],
+        ['turmeric', 0.5, 'spices', 'tsp'],
+        ['garlic', 2, 'spices', 'cloves'],
+        ['chilli', 1, 'veg', 'whole'],
+        ['stock cubes (veg)', 2, 'condiments', 'whole'],
+        ['red lentils', 250, 'tins', 'grams']
+    ]
+}
+
+export default recipes;

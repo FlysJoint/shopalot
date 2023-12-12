@@ -68,3 +68,113 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Shopalot
+
+Deploy in GCP
+
+Create Project in GCP account
+Project ID: shopalot-407910
+Enable Container Registry API
+<!-- Enable Cloud Storage API
+Enable App Engine Admin API -->
+
+Dockerfile
+`FROM node:16.15.1 as build
+WORKDIR /shopalot
+
+COPY package*.json .
+RUN npm install
+COPY . .
+
+RUN npm run build
+FROM nginx:1.19
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /shopalot/build /usr/share/nginx/html`
+
+
+nginx/nginx.conf
+`worker_processes  1;
+
+events {
+  worker_connections  1024;
+}
+
+http {
+  server {
+    listen 80;
+    server_name  localhost;
+
+    root   /usr/share/nginx/html;
+    index  index.html index.htm;
+    include /etc/nginx/mime.types;
+
+    gzip on;
+    gzip_min_length 1000;
+    gzip_proxied expired no-cache no-store private auth;
+    gzip_types text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+    location / {
+      try_files $uri $uri/ /index.html;
+    }
+  }
+}`
+
+`gcloud auth login`
+`gcloud config set project shopalot-407910`
+
+`docker buildx build --platform linux/amd64 -t shopalot .`
+
+`docker run -p 3001:80 shopalot` - run docker image and test on localhost:3001
+
+Tag image
+`docker tag shopalot gcr.io/shopalot-407910/shopalot`
+
+Push to Google repository
+`docker push gcr.io/shopalot-407910/shopalot`
+
+GCP -> Container registry
+See shopalot there
+
+GCP -> Cloud Run
+Create service
+Select Container registry tab and select relevant image
+Set region
+Allow unauthenticated
+Set port 80 from Container tab
+Click create
+
+Click the url to see the live app
+
+
+Choose Meals
+Needs meal amount, increase decrease button
+lunch v dinner? v breakfast
+add allergy, spiciness, gluten icons
+
+Planned Meals plus amount per meal
+Submit button
+
+Ingredients per meal
+
+Shopping List
+multiple ingredients formed into a unified shopping list
+
+TODO:
+
+~~get increment to be instant instead of one behind~~
+~~add meals to an array so they don't overwrite each other~~
+~~display recipe ingredients~~
+~~Don't display ingredients more than once~~
+~~Input recipes via a text file not hard coded~~
+~~Add icons as bools to the recipe~~
+~~Planned meals only show up if over 0~~
+~~Put ingredients into supermarket aisle friendly categories~~
+~~Only show ingredients if amount is above zero~~
+Page to look nice
+Final list to be easy to read
+Is there a memory leak with the useEffect dependency array?
+Justify ingredients
+Add a meal picture (and have a default image)
+check brown sugar units
+check ginger units
