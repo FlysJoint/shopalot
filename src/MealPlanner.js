@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 
+import './MealPlanner.css';
+
 import Meal from './Meal';
 import Ingredients from './Ingredients';
 
@@ -23,9 +25,9 @@ function MealPlanner(props) {
         setMeals((prev) => [...prev.filter(name => !name.includes(meals[0])), meals]);
     };
 
-    let plannedMeals = meals.map((meal) => meal[1] > 0 && <p>{meal[0]} x {meal[1]}</p>);
+    const plannedMeals = meals.map((meal) => meal[1] > 0 && <p>{meal[0]} x {meal[1]}</p>);
 
-    let all_choices = Object.entries(recipes);
+    const all_choices = Object.entries(recipes);
     // console.log(all_choices);
 
     const dataHandler = () => {
@@ -33,21 +35,80 @@ function MealPlanner(props) {
         props.passChildData(meals);
     }
 
-    // let my_choices = [];
-    // for (let i = 0; i < all_choices.length; i++) {
-    //     console.log(all_choices[i][1][0])
-    //     if (all_choices[i][1][0].includes(mealType)) {
-    //         my_choices.push(all_choices[i])
-    //     }
-    // }
+    // filter choices by meal type
+    const lunch_choices = [];
+    for (let i = 0; i < all_choices.length; i++) {
+        // console.log(all_choices[i][1][0])
+        if (all_choices[i][1][0].includes('lunch')) {
+            lunch_choices.push(all_choices[i])
+        }
+    }
 
-    // filter choices by meal type or cuisine
-    // my_choices = all_choices.map(m => m);
-    // console.log(my_choices);
+    const lunch_buttons = [];
+    for (let i = 0; i < lunch_choices.length; i += 3) {
 
-    // console.log(all_choices.map(m => m[0][1]));
+        let first = '';
+        let second = '';
+        let third = '';
 
-    
+        if (lunch_choices[i]) {
+            first = <td><Meal spicy={lunch_choices[i][1][0].includes('spicy')} nuts={lunch_choices[i][1][0].includes('nuts')} gluten={lunch_choices[i][1][0].includes('gluten')} name={lunch_choices[i][0]} mealplan={mealplan}/></td>
+        }
+
+        if (lunch_choices[i + 1]) {
+            second = <td><Meal spicy={lunch_choices[i + 1][1][0].includes('spicy')} nuts={lunch_choices[i + 1][1][0].includes('nuts')} gluten={lunch_choices[i + 1][1][0].includes('gluten')} name={lunch_choices[i + 1][0]} mealplan={mealplan}/></td>
+        }
+
+        if (lunch_choices[i + 2]) {
+            third = <td><Meal spicy={lunch_choices[i + 2][1][0].includes('spicy')} nuts={lunch_choices[i + 2][1][0].includes('nuts')} gluten={lunch_choices[i + 2][1][0].includes('gluten')} name={lunch_choices[i + 2][0]} mealplan={mealplan}/></td>
+        }
+
+        lunch_buttons.push(
+            <tr>
+                {first}
+                {second}
+                {third}
+            </tr>
+        );
+    }
+
+    const dinner_choices = [];
+    for (let i = 0; i < all_choices.length; i++) {
+        // console.log(all_choices[i][1][0])
+        if (all_choices[i][1][0].includes('dinner')) {
+            dinner_choices.push(all_choices[i])
+        }
+    }    
+
+    const dinner_buttons = [];
+    for (let i = 0; i < dinner_choices.length; i += 3) {
+
+        let first = '';
+        let second = '';
+        let third = '';
+
+        if (dinner_choices[i]) {
+            first = <td><Meal spicy={dinner_choices[i][1][0].includes('spicy')} nuts={dinner_choices[i][1][0].includes('nuts')} gluten={dinner_choices[i][1][0].includes('gluten')} name={dinner_choices[i][0]} mealplan={mealplan}/></td>
+        }
+
+        if (dinner_choices[i + 1]) {
+            second = <td><Meal spicy={dinner_choices[i + 1][1][0].includes('spicy')} nuts={dinner_choices[i + 1][1][0].includes('nuts')} gluten={dinner_choices[i + 1][1][0].includes('gluten')} name={dinner_choices[i + 1][0]} mealplan={mealplan}/></td>
+        }
+
+        if (dinner_choices[i + 2]) {
+            third = <td><Meal spicy={dinner_choices[i + 2][1][0].includes('spicy')} nuts={dinner_choices[i + 2][1][0].includes('nuts')} gluten={dinner_choices[i + 2][1][0].includes('gluten')} name={dinner_choices[i + 2][0]} mealplan={mealplan}/></td>
+        }
+
+        dinner_buttons.push(
+            <tr>
+                {first}
+                {second}
+                {third}
+            </tr>
+        );
+    }
+
+    // console.log(dinner_buttons)
 
     return (
         <div>
@@ -55,63 +116,36 @@ function MealPlanner(props) {
             
             {/* <button onClick={handleLunchClick}>Lunch</button> <button onClick={handleDinnerClick}>Dinner</button> */}
 
-            { all_choices.map(m => <Meal spicy={true} nuts={false} gluten={false} name={m[0]} mealplan={mealplan}/>) }
+            <h3>Lunch</h3>
 
-            {/* <table>
-                <tr>
-                    <td>
-                        <Meal spicy={true} nuts={false} gluten={false} name='Chicken Pathia' mealplan={mealplan}/>
-                    </td>
-                    <td>
-                        <Meal spicy={true} nuts={true} gluten={false} name='Lentil Curry'  mealplan={mealplan}/>
-                    </td>
-                    <td>
-                        <Meal spicy={true} nuts={false} gluten={false} name='Chicken Fajitas'  mealplan={mealplan}/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <Meal spicy={false} nuts={false} gluten={false} name='Carnitas' mealplan={mealplan}/>
-                    </td>
-                    <td>
-                        <Meal spicy={false} nuts={false} gluten={false} name='Lentil & bacon soup' mealplan={mealplan}/>
-                    </td>
-                    <td>
-                        <Meal spicy={false} nuts={false} gluten={false} name='Broccoli & Stilton soup' mealplan={mealplan}/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <Meal spicy={false} nuts={false} gluten={true} name='McMuffin' mealplan={mealplan}/>
-                    </td>
-                    <td>
-                        <Meal spicy={true} nuts={false} gluten={true} name='Gambas Pil Pil' mealplan={mealplan}/>
-                    </td>
-                    <td>
-                        <Meal spicy={false} nuts={false} gluten={true} name='Bruschetta' mealplan={mealplan}/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <Meal spicy={true} nuts={false} gluten={false} name='Italian Sausage' mealplan={mealplan}/>
-                    </td>
-                    <td>
-                        <Meal spicy={false} nuts={false} gluten={true} name='Stilton Mushrooms' mealplan={mealplan}/>
-                    </td>
-                    <td>
-                        <Meal spicy={true} nuts={false} gluten={false} name='Thukpa' mealplan={mealplan}/>
-                    </td>
-                </tr>
-            </table> */}
+            <table className='centre'>
+                <tbody>
+                    <tr>
+                        { lunch_buttons }
+                    </tr>
+                </tbody>
+            </table>
+
+            
+
+            <h3>Dinner</h3>
+
+            <table className='centre'>
+                <tbody>
+                    { dinner_buttons }
+                </tbody>
+            </table>
 
             <hr></hr>
-            <hr></hr>
+
             <h1>Planned Meals</h1>
-            {/* {meals.map((meal) => meal[1] > 0 && <p>{meal[0]} x {meal[1]}</p>)} */}
+
+            <p># of lunches, # of dinners</p>
+
             { plannedMeals }
             
 
-            <button onClick={dataHandler}>Submit</button>
+            <button onClick={dataHandler} height='50px' >Submit</button>
             
             {/* <Ingredients meals={meals}/> */}
 
