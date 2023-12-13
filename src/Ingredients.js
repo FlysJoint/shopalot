@@ -1,6 +1,5 @@
 import recipes from './data/recipes';
 
-
 function Ingredients(props) {
 
     function getIngredients(meals, category) {

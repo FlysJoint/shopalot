@@ -6,19 +6,58 @@ import Ingredients from './Ingredients';
 
 import recipes from './data/recipes';
 
-function MealPlanner() {
+function MealPlanner(props) {
 
     const [meals, setMeals] = useState([]);
+    // const [mealType, setMealType] = useState('lunch');
+
+    // const handleDinnerClick = () => {
+    //     setMealType('dinner');
+    // }
+
+    // const handleLunchClick = () => {
+    //     setMealType('lunch');
+    // }
 
     const mealplan = (meals) => {
         setMeals((prev) => [...prev.filter(name => !name.includes(meals[0])), meals]);
     };
 
+    let plannedMeals = meals.map((meal) => meal[1] > 0 && <p>{meal[0]} x {meal[1]}</p>);
+
+    let all_choices = Object.entries(recipes);
+    // console.log(all_choices);
+
+    const dataHandler = () => {
+        // console.log(meals);
+        props.passChildData(meals);
+    }
+
+    // let my_choices = [];
+    // for (let i = 0; i < all_choices.length; i++) {
+    //     console.log(all_choices[i][1][0])
+    //     if (all_choices[i][1][0].includes(mealType)) {
+    //         my_choices.push(all_choices[i])
+    //     }
+    // }
+
+    // filter choices by meal type or cuisine
+    // my_choices = all_choices.map(m => m);
+    // console.log(my_choices);
+
+    // console.log(all_choices.map(m => m[0][1]));
+
+    
+
     return (
         <div>
             <h1>Choose your meals</h1>
             
-            <table>
+            {/* <button onClick={handleLunchClick}>Lunch</button> <button onClick={handleDinnerClick}>Dinner</button> */}
+
+            { all_choices.map(m => <Meal spicy={true} nuts={false} gluten={false} name={m[0]} mealplan={mealplan}/>) }
+
+            {/* <table>
                 <tr>
                     <td>
                         <Meal spicy={true} nuts={false} gluten={false} name='Chicken Pathia' mealplan={mealplan}/>
@@ -63,14 +102,18 @@ function MealPlanner() {
                         <Meal spicy={true} nuts={false} gluten={false} name='Thukpa' mealplan={mealplan}/>
                     </td>
                 </tr>
-            </table>
+            </table> */}
 
             <hr></hr>
             <hr></hr>
             <h1>Planned Meals</h1>
-            {meals.map((meal) => meal[1] > 0 && <p>{meal[0]} x {meal[1]}</p>)}
+            {/* {meals.map((meal) => meal[1] > 0 && <p>{meal[0]} x {meal[1]}</p>)} */}
+            { plannedMeals }
             
-            <Ingredients meals={meals}/>
+
+            <button onClick={dataHandler}>Submit</button>
+            
+            {/* <Ingredients meals={meals}/> */}
 
         </div>
     )

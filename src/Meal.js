@@ -34,7 +34,7 @@ function Meal(props) {
     }
 
     function mealUpdate() {
-            props.mealplan([props.name, mealAmount]);
+        props.mealplan([props.name, mealAmount]);
     }
 
     return (
