@@ -29,49 +29,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
 
 ## Set up Github repo
+```
+git init
 
+```
 
 ## Deploy in GCP
 
@@ -81,8 +44,9 @@ Project ID: shopalot-407910
 Enable Container Registry API
 
 ### Dockerfile
-Dockerfile
-`FROM node:16.15.1 as build
+
+```
+FROM node:16.15.1 as build
 WORKDIR /shopalot
 
 COPY package*.json ./
@@ -92,11 +56,14 @@ COPY . .
 RUN npm run build
 FROM nginx:1.19
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /shopalot/build /usr/share/nginx/html`
+COPY --from=build /shopalot/build /usr/share/nginx/html
+```
 
 
-nginx/nginx.conf
-`worker_processes  1;
+### nginx/nginx.conf
+
+```
+worker_processes  1;
 
 events {
   worker_connections  1024;
@@ -120,15 +87,22 @@ http {
       try_files $uri $uri/ /index.html;
     }
   }
-}`
+}
+```
 
 ### Terminal
-`gcloud auth login`
-`gcloud config set project shopalot-407910`
 
+Authenticate
+```
+gcloud auth login
+gcloud config set project shopalot-407910
+```
+
+Build docker image
 `docker buildx build --platform linux/amd64 -t shopalot .`
 
-`docker run -p 3001:80 shopalot` - run docker image and test on localhost:3001
+Run docker image and test on localhost:3001
+`docker run -p 3001:80 shopalot`
 
 Tag image
 `docker tag shopalot gcr.io/shopalot-407910/shopalot`
@@ -165,6 +139,8 @@ Build type: Dockerfile
 Check line in Dockerfile reads:
 `COPY package*.json ./`
 
+App will deploy on successful merges to main branch.
+
 # Shopalot
 
 ## Functionality
@@ -172,6 +148,8 @@ Check line in Dockerfile reads:
 Add ingredients to shopping list by increasing/decreasing the amount required.
 
 ## TODO:
+
+### Functionality
 
 - ~~get increment to be instant instead of one behind~~
 - ~~add meals to an array so they don't overwrite each other~~
@@ -192,3 +170,8 @@ Add ingredients to shopping list by increasing/decreasing the amount required.
 - populate data
 - make buttons slightly bigger
 - submit button that disables meal edit buttons
+- initial buttibs that split into lunch and dinner
+
+### Under the hood
+
+- Move from container registry to artifact registry as it's deprecated

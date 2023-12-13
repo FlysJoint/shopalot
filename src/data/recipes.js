@@ -1,5 +1,6 @@
 const recipes = {
     "Chicken Pathia": [
+        ['dinner', 'indian'],
         ["ghee", 2, 'dairy', 'tbsp'],
         ["chicken", 3, 'meat', 'breasts'],
         ["onion", 3, "veg", 'whole'],
@@ -16,6 +17,7 @@ const recipes = {
         ["non green pepper", 1, 'veg', 'whole']
     ],
     "Lentil Curry": [
+        ['dinner', 'indian'],
         ["red lentils", 500, 'tins', 'grams'],
         ["butter", 50, 'dairy', 'grams'],
         ["garlic", 4, 'spices', 'cloves'],
@@ -33,6 +35,7 @@ const recipes = {
         ["flaked almonds", 2, 'baking', 'tbsp']
     ],
     "Chicken Fajitas": [
+        ['dinner', 'mexican'],
         ["chicken", 2, 'meat', 'breasts'],
         ["rapeseed oil", 1, 'condiments', 'tbsp'],
         ["non green pepper", 2, 'veg', 'whole'],
@@ -55,6 +58,7 @@ const recipes = {
         ["jalapenos", 1, 'veg', 'whole']
     ],
     "Carnitas": [
+        ['dinner', 'mexican'],
         ["pork shoulder", 2000, 'meat', 'grams'],
         ["salt", 2.5, 'spices', 'tsp'],
         ["black pepper", 1, 'spices', 'tsp'],
@@ -67,6 +71,7 @@ const recipes = {
         ["olive oil", 1, "condiments", 'tbsp']
     ],
     "Lentil & bacon soup": [
+        ['lunch', 'misc'],
         ['olive oil', 1, 'condiments', 'tbsp'],
         ['onion', 1, 'veg', 'whole'],
         ['pancetta', 300, 'meat', 'grams'],
@@ -77,6 +82,108 @@ const recipes = {
         ['chilli', 1, 'veg', 'whole'],
         ['stock cubes (veg)', 2, 'condiments', 'whole'],
         ['red lentils', 250, 'tins', 'grams']
+    ],
+    "Broccoli & Stilton soup": [
+        ['lunch', 'english'],
+        ["olive oil", 0.33, 'condiments', 'tbsp'],
+        ['onion', 2, 'veg', 'whole'],
+        ['potato', 2, 'veg', 'whole'],
+        ['stock cube (veg)', 2, 'condiments', 'whole'],
+        ['broccoli', 300, 'veg', 'grams'],
+        ['stilton', 100, 'dairy', 'grams']
+    ],
+    "Couscous Salad": [
+        ['lunch', 'misc'],
+        ['wholewheat couscous', 100, 'tins', 'grams'],
+        ['stock cube (veg)', 1, 'condiments', 'whole'],
+        ['spring onion', 2, 'veg', 'whole'],
+        ['red pepper', 1, 'veg', 'whole'],
+        ['cucumber', 0.25, 'veg', 'whole'],
+        ['chorizo', 50, 'meat', 'grams'],
+        ['feta', 50, 'dairy', 'grams'],
+        ['pine nut', 2, 'baking', 'grams']
+    ],
+    'Thukpa': [
+        ['lunch', 'indian'],
+        ['onion', 1, 'veg', 'whole'],
+        ['garlic', 2, 'spices', 'cloves'],
+        ['ginger', 0.33, 'spices', 'tbsp'],
+        ['cumin', 1, 'spices', 'tsp'],
+        ['turmeric', 0.5, 'spices', 'tsp'],
+        ['szechuan pepper', 0.25, 'spices', 'tsp'],
+        ['asafoetida', 0.125, 'spices', 'tsp'],
+        ['green chilli', 1, 'veg', 'whole'],
+        ['chopped tomatoes', 0.5, 'tins', 'tins'],
+        ['rapeseed oil', 1, 'condiments', 'tbsp'],
+        ['stock cube (chicken)', 3, 'condiments', 'cubes'],
+        ['chicken', 1, 'meat', 'breasts'],
+        ['carrot', 100, 'veg', 'grams'],
+        ['red pepper', 0.5, 'veg', 'whole'],
+        ['lemon juice', 1, 'condiments', 'tbsp'],
+        ['salt', 1, 'spices', 'tsp'],
+        ['black pepper', 1, 'spices', 'tsp'],
+        ['coriander', 1, 'veg', 'handfuls'],
+        ['shiitake mushrooms', 100, 'veg', 'grams'],
+        ['beansprouts', 1, 'tins', 'tins']
+    ],
+    'Stilton Mushrooms': [
+        ['lunch', 'english'],
+        ['unsalted butter', 10, 'dairy', 'grams'],
+        ['mushrooms', 225, 'veg', 'grams'],
+        ['garlic', 3, 'spices', 'cloves'],
+        ['double cream', 80, 'dairy', 'ml'],
+        ['stilton', 225, 'dairy', 'grams']
+    ],
+    'Italian Sausage': [
+        ['lunch', 'italian'],
+        ['pork mince', 500, 'meat', 'grams'],
+        ['red wine vinegar', 1, 'condiments', 'tbsp'],
+        ['dried parsley', 1, 'spices', 'tsp'],
+        ['dried basil', 1, 'spices', 'tsp'],
+        ['garlic powder', 1, 'spices', 'tsp'],
+        ['onion powder', 1, 'spices', 'tsp'],
+        ['salt', 1, 'spices', 'tsp'],
+        ['black pepper', 1, 'spices', 'tsp'],
+        ['paprika', 0.75, 'spices', 'tsp'],
+        ['chilli flakes', 0.75, 'spices', 'tsp'],
+        ['fennel', 0.25, 'spices', 'tsp'],
+        ['brown sugar', 0.125, 'baking', 'tsp'],
+        ['oregano', 0.125, 'spices', 'tsp'],
+        ['thyme', 0.125, 'spices', 'tsp']
+    ],
+    'McMuffin': [
+        ['lunch', 'american'],
+        ['pork mince', 500, 'meat', 'grams'],
+        ['sage', 0.5, 'spices', 'tsp'],
+        ['thyme', 0.5, 'spices', 'tsp'],
+        ['onion powder', 1, 'spices', 'tsp'],
+        ['black pepper', 0.75, 'spices', 'tsp'],
+        ['salt', 0.75, 'spices', 'tsp'],
+        ['brown sugar', 0.5, 'baking', 'tsp'],
+        ['plastic cheese', 4, 'dairy', 'slices'],
+        ['rapeseed oil', 2, 'condiments', 'tbsp'],
+        ['egg', 4, 'dairy', 'whole'],
+        ['muffin', 4, 'bakery', 'whole']
+    ],
+    'Gambas Pil Pil': [
+        ['lunch', 'spanish'],
+        ['olive oil', 6, 'condiments', 'tbsp'],
+        ['raw king prawns', 180, 'meat', 'grams'],
+        ['garlic', 4, 'spices', 'grams'],
+        ['red chilli', 1, 'veg', 'whole'],
+        ['paprika', 0.5, 'spices', 'tsp'],
+        ['flat leaf parsley', 2, 'veg', 'tbsp'],
+        ['nice bread', 1, 'bakery', 'stick']
+    ],
+    'Bruschetta': [
+        ['lunch', 'italian'],
+        ['red onion', 0.5, 'veg', 'whole'],
+        ['tomato', 500, 'veg', 'grams'],
+        ['garlic', 3, 'spices', 'cloves'],
+        ['basil', 8, 'veg', 'leaves'],
+        ['balsamic vinegar', 30, 'condiments', 'ml'],
+        ['extra virgin olive oil', 80, 'condiments', 'ml'],
+        ['nice bread', 1, 'bakery', 'stick']
     ]
 }
 

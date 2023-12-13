@@ -13,7 +13,7 @@ function Ingredients(props) {
             let meal_amount = meals[i][1];
 
             // loop through meal ingredients
-            for (let m = 0; m < recipes[meal].length; m++) {
+            for (let m = 1; m < recipes[meal].length; m++) {
 
                 let ingredient = recipes[meal][m][0];
                 let ingredient_amount = recipes[meal][m][1];

@@ -39,7 +39,6 @@ function Meal(props) {
 
     return (
         <div>
-            {/* <hr></hr> */}
             {default_plate}
             <p>{props.nuts && nuts}{props.spicy && spicy}{props.gluten && glutenfree}{props.name} x {mealChange} </p>
             <button onClick={handleUpClick}>+</button>

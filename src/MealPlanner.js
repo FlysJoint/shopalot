@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Meal from './Meal';
 import Ingredients from './Ingredients';
 
+import recipes from './data/recipes';
+
 function MealPlanner() {
 
     const [meals, setMeals] = useState([]);
@@ -36,11 +38,30 @@ function MealPlanner() {
                         <Meal spicy={false} nuts={false} gluten={false} name='Lentil & bacon soup' mealplan={mealplan}/>
                     </td>
                     <td>
-                        
+                        <Meal spicy={false} nuts={false} gluten={false} name='Broccoli & Stilton soup' mealplan={mealplan}/>
                     </td>
                 </tr>
                 <tr>
-
+                    <td>
+                        <Meal spicy={false} nuts={false} gluten={true} name='McMuffin' mealplan={mealplan}/>
+                    </td>
+                    <td>
+                        <Meal spicy={true} nuts={false} gluten={true} name='Gambas Pil Pil' mealplan={mealplan}/>
+                    </td>
+                    <td>
+                        <Meal spicy={false} nuts={false} gluten={true} name='Bruschetta' mealplan={mealplan}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <Meal spicy={true} nuts={false} gluten={false} name='Italian Sausage' mealplan={mealplan}/>
+                    </td>
+                    <td>
+                        <Meal spicy={false} nuts={false} gluten={true} name='Stilton Mushrooms' mealplan={mealplan}/>
+                    </td>
+                    <td>
+                        <Meal spicy={true} nuts={false} gluten={false} name='Thukpa' mealplan={mealplan}/>
+                    </td>
                 </tr>
             </table>
 
