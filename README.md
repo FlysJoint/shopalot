@@ -161,7 +161,7 @@ Add ingredients to shopping list by increasing/decreasing the amount required.
 - ~~Put ingredients into supermarket aisle friendly categories~~
 - ~~Only show ingredients if amount is above zero~~
 - Page to look nice
-- Final list to be easy to read
+- ~~Final list to be easy to read~~
 - Is there a memory leak with the useEffect dependency array?
 - Justify ingredients
 - Add a meal picture (and have a default image)
@@ -170,7 +170,11 @@ Add ingredients to shopping list by increasing/decreasing the amount required.
 - populate data
 - make buttons slightly bigger
 - submit button that disables meal edit buttons
-- initial buttibs that split into lunch and dinner
+- ~~initial buttons that split into lunch and dinner~~
+- add serving amount to data and display total on screen
+- add back button to list part
+- split meal planner into lunch and dinner sections
+- split dinner section into cuisines
 
 ### Under the hood
 

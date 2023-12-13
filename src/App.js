@@ -1,17 +1,19 @@
 import './App.css';
 
 import Header from './Header';
-// import NavBar from './NavBar';
 import MealPlanner from './MealPlanner';
-// import Footer from './Footer';
+
+import AppRouter from './AppRouter';
 
 function App() {
   return (
     <div className="App">
-      <Header name='Bob'/>
-      {/* <NavBar /> */}
-      <MealPlanner />
-      {/* <Footer /> */}
+
+      {/* <Header name='Bob'/>
+      <MealPlanner /> */}
+
+      <AppRouter />
+
     </div>
   );
 }
