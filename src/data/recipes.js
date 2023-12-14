@@ -1,6 +1,6 @@
 const recipes = {
     "Chicken Pathia": [
-        ['dinner', 'indian', 'spicy'],
+        ['dinner', 4, 'indian', 'spicy'],
         ["ghee", 2, 'dairy', 'tbsp'],
         ["chicken", 3, 'meat', 'breasts'],
         ["onion", 3, "veg", 'whole'],
@@ -17,7 +17,7 @@ const recipes = {
         ["non green pepper", 1, 'veg', 'whole']
     ],
     "Lentil Curry": [
-        ['dinner', 'indian', 'spicy', 'nuts'],
+        ['dinner', 6, 'indian', 'spicy', 'nuts'],
         ["red lentils", 500, 'tins', 'grams'],
         ["butter", 50, 'dairy', 'grams'],
         ["garlic", 4, 'spices', 'cloves'],
@@ -35,7 +35,7 @@ const recipes = {
         ["flaked almonds", 2, 'baking', 'tbsp']
     ],
     "Chicken Fajitas": [
-        ['dinner', 'mexican', 'spicy', 'gluten'],
+        ['dinner', 4, 'mexican', 'spicy', 'gluten'],
         ["chicken", 2, 'meat', 'breasts'],
         ["rapeseed oil", 1, 'condiments', 'tbsp'],
         ["non green pepper", 2, 'veg', 'whole'],
@@ -58,7 +58,7 @@ const recipes = {
         ["jalapenos", 1, 'veg', 'whole']
     ],
     "Carnitas": [
-        ['dinner', 'mexican'],
+        ['dinner', 8, 'mexican'],
         ["pork shoulder", 2000, 'meat', 'grams'],
         ["salt", 2.5, 'spices', 'tsp'],
         ["black pepper", 1, 'spices', 'tsp'],
@@ -71,7 +71,7 @@ const recipes = {
         ["olive oil", 1, "condiments", 'tbsp']
     ],
     "Lentil & bacon soup": [
-        ['lunch', 'misc'],
+        ['lunch', 6, 'misc'],
         ['olive oil', 1, 'condiments', 'tbsp'],
         ['onion', 1, 'veg', 'whole'],
         ['pancetta', 300, 'meat', 'grams'],
@@ -84,7 +84,7 @@ const recipes = {
         ['red lentils', 250, 'tins', 'grams']
     ],
     "Broccoli & Stilton soup": [
-        ['lunch', 'english'],
+        ['lunch', 4, 'english'],
         ["olive oil", 0.33, 'condiments', 'tbsp'],
         ['onion', 2, 'veg', 'whole'],
         ['potato', 2, 'veg', 'whole'],
@@ -93,7 +93,7 @@ const recipes = {
         ['stilton', 100, 'dairy', 'grams']
     ],
     "Couscous Salad": [
-        ['lunch', 'misc', 'nuts'],
+        ['lunch', 2, 'misc', 'nuts'],
         ['wholewheat couscous', 100, 'tins', 'grams'],
         ['stock cube (veg)', 1, 'condiments', 'whole'],
         ['spring onion', 2, 'veg', 'whole'],
@@ -104,7 +104,7 @@ const recipes = {
         ['pine nut', 2, 'baking', 'grams']
     ],
     'Thukpa': [
-        ['lunch', 'indian', 'spicy'],
+        ['lunch', 6, 'indian', 'spicy'],
         ['onion', 1, 'veg', 'whole'],
         ['garlic', 2, 'spices', 'cloves'],
         ['ginger', 0.33, 'spices', 'tbsp'],
@@ -127,7 +127,7 @@ const recipes = {
         ['beansprouts', 1, 'tins', 'tins']
     ],
     'Stilton Mushrooms': [
-        ['lunch', 'english', 'gluten'],
+        ['lunch', 2, 'english', 'gluten'],
         ['unsalted butter', 10, 'dairy', 'grams'],
         ['mushrooms', 225, 'veg', 'grams'],
         ['garlic', 3, 'spices', 'cloves'],
@@ -136,7 +136,7 @@ const recipes = {
         ['nice bread', 1, 'bakery', 'stick']
     ],
     'Italian Sausage': [
-        ['lunch', 'italian', 'spicy'],
+        ['lunch', 6, 'italian', 'spicy'],
         ['pork mince', 500, 'meat', 'grams'],
         ['red wine vinegar', 1, 'condiments', 'tbsp'],
         ['dried parsley', 1, 'spices', 'tsp'],
@@ -153,7 +153,7 @@ const recipes = {
         ['thyme', 0.125, 'spices', 'tsp']
     ],
     'McMuffin': [
-        ['lunch', 'american', 'gluten'],
+        ['lunch', 4, 'american', 'gluten'],
         ['pork mince', 500, 'meat', 'grams'],
         ['sage', 0.5, 'spices', 'tsp'],
         ['thyme', 0.5, 'spices', 'tsp'],
@@ -167,7 +167,7 @@ const recipes = {
         ['muffin', 4, 'bakery', 'whole']
     ],
     'Gambas Pil Pil': [
-        ['lunch', 'spanish', 'spicy', 'gluten'],
+        ['lunch', 2, 'spanish', 'spicy', 'gluten'],
         ['olive oil', 6, 'condiments', 'tbsp'],
         ['raw king prawns', 180, 'meat', 'grams'],
         ['garlic', 4, 'spices', 'grams'],
@@ -177,7 +177,7 @@ const recipes = {
         ['nice bread', 1, 'bakery', 'stick']
     ],
     'Bruschetta': [
-        ['lunch', 'italian', 'gluten'],
+        ['lunch', 4, 'italian', 'gluten'],
         ['red onion', 0.5, 'veg', 'whole'],
         ['tomato', 500, 'veg', 'grams'],
         ['garlic', 3, 'spices', 'cloves'],

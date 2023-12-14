@@ -10,8 +10,6 @@ function AppRouter() {
 
     const [childData, setChildData] = useState("");
 
-    // console.log(childData);
-
     if (!childData) {
 
         return <MealPlanner passChildData={setChildData}/>
@@ -19,23 +17,6 @@ function AppRouter() {
     else {
         return <List data={childData}/>
     }
-
-    // return (
-    //     <BrowserRouter>
-    //         <Routes>
-    //             <Route path="/" element={
-    //                 <MealPlanner passChildData={setChildData}/>
-    //             } />
-
-    //             {/* <Route path="/planned" element={} /> */}
-
-    //             <Route path="/list" element={
-    //                 <List data={childData}/>
-    //             } />
-    //         </Routes>
-    //     </BrowserRouter>
-    // )
-
 }
 
 export default AppRouter;

@@ -4,41 +4,47 @@ import { useState } from 'react';
 import './MealPlanner.css';
 
 import Meal from './Meal';
-import Ingredients from './Ingredients';
+// import Ingredients from './Ingredients';
 
 import recipes from './data/recipes';
 
 function MealPlanner(props) {
 
     const [meals, setMeals] = useState([]);
-    // const [mealType, setMealType] = useState('lunch');
-
-    // const handleDinnerClick = () => {
-    //     setMealType('dinner');
-    // }
-
-    // const handleLunchClick = () => {
-    //     setMealType('lunch');
-    // }
 
     const mealplan = (meals) => {
         setMeals((prev) => [...prev.filter(name => !name.includes(meals[0])), meals]);
     };
 
+    console.log(meals);
+
     const plannedMeals = meals.map((meal) => meal[1] > 0 && <p>{meal[0]} x {meal[1]}</p>);
 
+    // console.log(plannedMeals)
+
     const all_choices = Object.entries(recipes);
-    // console.log(all_choices);
 
     const dataHandler = () => {
-        // console.log(meals);
         props.passChildData(meals);
+    }
+
+    let num_lunches = 0;
+    let num_dinners = 0;
+    for (let i = 0; i < meals.length; i++) {
+        console.log(meals[i])
+        const servings = recipes[meals[i][0]][0][1] * meals[i][1];
+        const mealType = recipes[meals[i][0]][0][0];
+        if (mealType === 'lunch') {
+            num_lunches += servings;
+        }
+        else {
+            num_dinners += servings;
+        }
     }
 
     // filter choices by meal type
     const lunch_choices = [];
     for (let i = 0; i < all_choices.length; i++) {
-        // console.log(all_choices[i][1][0])
         if (all_choices[i][1][0].includes('lunch')) {
             lunch_choices.push(all_choices[i])
         }
@@ -74,7 +80,6 @@ function MealPlanner(props) {
 
     const dinner_choices = [];
     for (let i = 0; i < all_choices.length; i++) {
-        // console.log(all_choices[i][1][0])
         if (all_choices[i][1][0].includes('dinner')) {
             dinner_choices.push(all_choices[i])
         }
@@ -108,14 +113,10 @@ function MealPlanner(props) {
         );
     }
 
-    // console.log(dinner_buttons)
-
     return (
         <div>
             <h1>Choose your meals</h1>
             
-            {/* <button onClick={handleLunchClick}>Lunch</button> <button onClick={handleDinnerClick}>Dinner</button> */}
-
             <h3>Lunch</h3>
 
             <table className='centre'>
@@ -125,8 +126,6 @@ function MealPlanner(props) {
                     </tr>
                 </tbody>
             </table>
-
-            
 
             <h3>Dinner</h3>
 
@@ -140,12 +139,11 @@ function MealPlanner(props) {
 
             <h1>Planned Meals</h1>
 
-            <p># of lunches, # of dinners</p>
+            <h2>Lunches: {num_lunches}, Dinners: {num_dinners}</h2>
 
             { plannedMeals }
             
-
-            <button onClick={dataHandler} height='50px' >Submit</button>
+            <button onClick={dataHandler} >Submit</button>
             
             {/* <Ingredients meals={meals}/> */}
 
