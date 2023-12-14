@@ -163,17 +163,17 @@ Add ingredients to shopping list by increasing/decreasing the amount required.
 - Page to look nice
 - ~~Final list to be easy to read~~
 - Is there a memory leak with the useEffect dependency array?
-- Justify ingredients
+- ~~Justify ingredients~~
 - Add a meal picture (and have a default image)
 - check brown sugar units
 - check ginger units
 - populate data
 - make buttons slightly bigger
-- submit button that disables meal edit buttons
+- ~~submit button that disables meal edit buttons~~
 - ~~initial buttons that split into lunch and dinner~~
-- add serving amount to data and display total on screen
+- ~~add serving amount to data and display total on screen~~
 - add back button to list part
-- split meal planner into lunch and dinner sections
+- ~~split meal planner into lunch and dinner sections~~
 - split dinner section into cuisines
 
 ### Under the hood
