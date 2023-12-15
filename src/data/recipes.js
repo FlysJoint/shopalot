@@ -481,7 +481,7 @@ const recipes = {
         ['olive oil', 0.33, 'condiments', 'cups']
     ],
     'Korean Fried Chicken': [
-        ['dinner', 4, 'korean', 'spicy'],
+        ['dinner', 4, 'korean', 'spicy', 'gluten'],
         ['chicken', 500, 'meat', 'grams'],
         ['rapeseed oil', 1, 'condiments', 'tbsp'],
         ['beansprouts', 1, 'tins', 'tins'],
@@ -498,6 +498,131 @@ const recipes = {
         ['sesame oil', 0.5, 'condiments', 'tbsp'],
         ['ginger', 1.5, 'condiments', 'tsp'],
         ['garlic', 2, 'spices', 'tsp']
+    ],
+    'Fries': [
+        ['dinner', 0, 'belgian'],
+        ['potato', 500, 'veg', 'grams'],
+        ['olive oil', 1, 'condiments', 'tbsp'],
+        ['garlic powder', 1.5, 'spices', 'tsp']
+    ],
+    'Gyros': [
+        ['dinner', 4, 'greek', 'gluten'],
+        ['pork tenderloin', 650, 'meat', 'grams'],
+        ['garlic', 1, 'spices', 'cloves'],
+        ['red onion', 1.5, 'veg', 'whole'],
+        ['olive oil', 4, 'condiments', 'tbsp'],
+        ['red wine vinegar', 2, 'condiments', 'tbsp'],
+        ['oregano', 3, 'spices', 'tsp'],
+        ['thyme', 3, 'spices', 'tsp'],
+        ['rosemary', 3, 'spices', 'tsp'],
+        ['honey', 0.5, 'baking', 'tbsp'],
+        ['tomato', 1, 'veg', 'whole'],
+        ['lettuce', 0.25, 'veg', 'whole'],
+        ['greek yoghurt', 8, 'dairy', 'tbsp'],
+        ['pitta', 4, 'baking', 'whole']
+    ],
+    'Doner': [
+        ['dinner', 4, 'greek', 'spicy', 'gluten'],
+        ['lamb mince', 750, 'meat', 'grams'],
+        ['onion powder', 3, 'spices', 'tsp'],
+        ['garlic', 3, 'spices', 'cloves'],
+        ['cumin', 3, 'spices', 'tsp'],
+        ['paprika', 3, 'spices', 'tsp'],
+        ['oregano', 2, 'spices', 'tsp'],
+        ['salt', 1, 'spices', 'tsp'],
+        ['black pepper', 0.5, 'spices', 'tsp'],
+        ['lettuce', 0.25, 'veg', 'whole'],
+        ['cucumber', 0.25, 'veg', 'whole'],
+        ['tomato', 1, 'veg', 'whole'],
+        ['red onion', 1, 'veg', 'whole'],
+        ['pitta', 4, 'bakery', 'whole']
+    ],
+    'Chilli Sauce': [
+        ['dinner', 0, 'greek', 'spicy'],
+        ['vinegar', 100, 'condiments', 'ml'],
+        ['sugar', 50, 'baking', 'grams'],
+        ['red chilli', 2, 'veg', 'whole'],
+        ['ketchup', 100, 'condiments', 'ml'],
+        ['hendersons', 1, 'condiments', 'tsp']
+    ],
+    'Bulgogi': [
+        ['dinner', 2, 'korean', 'spicy', 'gluten'],
+        ['sirloin steak', 450, 'meat', 'grams'],
+        ['light soy sauce', 2, 'condiments', 'tbsp'],
+        ['honey', 4, 'baking', 'tsp'],
+        ['sesame oil', 4, 'condiments', 'tsp'],
+        ['onion', 0.25, 'veg', 'whole'],
+        ['ginger', 3, 'veg', 'tsp'],
+        ['garlic', 4, 'spices', 'cloves'],
+        ['black pepper', 0.5, 'spices', 'tsp'],
+        ['mayonnaise', 4, 'condiments', 'tbsp'],
+        ['baguette', 1, 'bakery', 'stick'],
+        ['spring onion', 2, 'veg', 'whole'],
+        ['red chilli', 1, 'veg', 'whole'],
+        ['rocket', 70, 'veg', 'grams']
+    ],
+    'Reuben': [
+        ['lunch', 2, 'american', 'gluten'],
+        ['rye bread', 4, 'bakery', 'slices'],
+        ['pastrami', 6, 'meat', 'slices'],
+        ['sauerkraut', 8, 'tins', 'tbsp'],
+        ['emmenthal', 4, 'dairy', 'slices'],
+        ['french dressing', 2, 'condiments', 'tbsp']
+    ],
+    'Croque Monsieur': [
+        ['lunch', 2, 'french', 'gluten'],
+        ['unsalted butter', 0.125, 'dairy', 'cups'],
+        ['flour', 0.125, 'baking', 'cups'],
+        ['whole milk', 0.75, 'dairy', 'cups'],
+        ['dijon', 0.125, 'condiments', 'tsp'],
+        ['nutmeg', 0.125, 'spices', 'tsp'],
+        ['bread', 4, 'baking', 'slices'],
+        ['ham', 4, 'meat', 'slices'],
+        ['emmenthal', 4, 'dairy', 'slices'],
+        ['parmesan', 0.125, 'dairy', 'cups']
+    ],
+    'French Dressing': [
+        ['lunch', 0, 'french'],
+        ['dijon', 1, 'condiments', 'tsp'],
+        ['white wine vinegar', 2, 'condiments', 'tbsp'],
+        ['extra virgin olive oil', 6, 'condiments', 'tbsp'],
+        ['sugar', 0.125, 'baking', 'tsp'],
+        ['salt', 0.125, 'spices', 'tsp'],
+        ['black pepper', 0.125, 'spices', 'tsp']
+    ],
+    'Apple Cider Dressing': [
+        ['lunch', 0, 'english'],
+        ['extra virgin olive oil', 0.33, 'condiments', 'cups'],
+        ['apple cider vinegar', 0.25, 'condiments', 'cups'],
+        ['dijon', 3, 'condiments', 'tsp'],
+        ['honey', 1, 'baking', 'tbsp'],
+        ['garlic', 1, 'spices', 'tsp'],
+        ['salt', 0.5, 'spices', 'tsp'],
+        ['black pepper', 0.5, 'spices', 'tsp']
+    ],
+    'Italian Dressing': [
+        ['lunch', 0, 'french'],
+        ['dijon', 2, 'condiments', 'tsp'],
+        ['red wine vinegar', 3, 'condiments', 'tbsp'],
+        ['extra virgin olive oil', 0.5, 'condiments', 'cup'],
+        ['honey', 1, 'baking', 'tbsp'],
+        ['salt', 0.5, 'spices', 'tsp'],
+        ['black pepper', 0.25, 'spices', 'tsp'],
+        ['italian seasoning', 1, 'spices', 'tsp'],
+        ['garlic', 2, 'spices', 'tsp']
+    ],
+    'Lemon Dressing': [
+        ['lunch', 0, 'french', 'spicy'],
+        ['extra virgin olive oil', 0.75, 'condiments', 'cups'],
+        ['white wine vinegar', 0.25, 'condiments', 'cups'],
+        ['garlic powder', 1, 'spices', 'tsp'],
+        ['oregano', 1, 'spices', 'tsp'],
+        ['basil', 1, 'spices', 'tsp'],
+        ['lemon juice', 1, 'spices', 'tsp'],
+        ['onion powder', 0.5, 'spices', 'tsp'],
+        ['dried chilli', 0.5, 'spices', 'tsp'],
+        ['salt', 0.75, 'spices', 'tsp'],
+        ['black pepper', 0.5, 'spices', 'tsp']
     ]
 }
 
