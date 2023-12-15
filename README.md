@@ -175,6 +175,8 @@ Add ingredients to shopping list by increasing/decreasing the amount required.
 - add back button to list part
 - ~~split meal planner into lunch and dinner sections~~
 - split dinner section into cuisines
+- Add rough prices for meals
+- ~~Put amount in centre of plate~~
 
 ### Under the hood
 

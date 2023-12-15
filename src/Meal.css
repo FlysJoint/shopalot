@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+p, button {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+button {
+    font-size: 1.5em;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: blue;
+    font-size: 3em;
+}
+
+.centered {
+    position: absolute;
+    top: 47%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}

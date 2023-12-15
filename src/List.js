@@ -1,5 +1,7 @@
 import Ingredients from "./Ingredients";
 
+// import './List.css';
+
 function List(props) {
 
     // console.log(props.data);

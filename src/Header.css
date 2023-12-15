@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
-h1, h3 {
+h1 {
     font-family: "Josefin Sans", sans-serif;
-}
-
-h3 {
-  font-size: 1.75em;
-}
-
-.centre {
-    margin-left: auto;
-    margin-right: auto;
 }

@@ -1,21 +1,28 @@
 import './App.css';
 
 import Header from './Header';
-import MealPlanner from './MealPlanner';
+import MealPlanner from "./MealPlanner";
+import List from "./List";
 
-import AppRouter from './AppRouter';
+import { useState } from "react";
+
 
 function App() {
-  return (
-    <div className="App">
 
-      {/* <Header name='Bob'/>
-      <MealPlanner /> */}
+  const [childData, setChildData] = useState("");
 
-      <AppRouter />
+  if (!childData) {
 
-    </div>
-  );
+      return (
+        <div className='App'>
+          <Header /> 
+          <MealPlanner passChildData={setChildData}/>
+        </div>
+      )
+  }
+  else {
+      return <List data={childData}/>
+  }
 }
 
 export default App;

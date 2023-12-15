@@ -121,9 +121,7 @@ function MealPlanner(props) {
 
             <table className='centre'>
                 <tbody>
-                    <tr>
-                        { lunch_buttons }
-                    </tr>
+                    { lunch_buttons }
                 </tbody>
             </table>
 
