@@ -1,10 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
+import './Meal.css';
+
 import nut from './images/nut.png';
 import chilli from './images/chilli.png';
 import gluten from './images/gluten.png';
-import plate from './images/plate.jpg';
+import plate from './images/default_plate.png';
 
 function Meal(props) {
 
@@ -14,7 +16,7 @@ function Meal(props) {
     const nuts = <img src={nut} className="nut_icon" alt="contains nuts" width="19" height="20"/>
     const spicy = <img src={chilli} className="chilli_icon" alt="spicy" width="20" height="20"/>
     const glutenfree = <img src={gluten} className="gluten_icon" alt="contains gluten" width="20" height="20"/>
-    const default_plate = <img src={plate} className="default_image" alt="default plate" width="100" height="100" />
+    const default_plate = <img src={plate} className="default_image" alt="default plate" width="150" height="125" />
 
     useEffect(() => {
         setMealChange(() => mealAmount);
@@ -39,12 +41,14 @@ function Meal(props) {
 
     return (
         <div>
-            {default_plate}
-            <p>{props.nuts && nuts}{props.spicy && spicy}{props.gluten && glutenfree}{props.name} x {mealChange} </p>
+            <div className='container' >
+                {default_plate}
+                <div class="centered">{mealChange}</div>
+            </div>
+            <p>{props.nuts && nuts}{props.spicy && spicy}{props.gluten && glutenfree}{props.name}</p>
             <button onClick={handleUpClick}>+</button>
             <button onClick={handleDownClick}>-</button>
             <button onClick={handleResetClick}>Reset</button>
-            <br></br>
         </div>
     )
 }
