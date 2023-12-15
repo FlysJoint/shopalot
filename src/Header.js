@@ -6,7 +6,7 @@ function Header(props) {
 
     return (
         <div>
-            <h1>Shopping List Generator v1.7</h1>
+            <h1>Shopping List Generator v1.8</h1>
         </div>
     )
 }
