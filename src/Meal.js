@@ -16,7 +16,7 @@ function Meal(props) {
     const nuts = <img src={nut} className="nut_icon" alt="contains nuts" width="19" height="20"/>
     const spicy = <img src={chilli} className="chilli_icon" alt="spicy" width="20" height="20"/>
     const glutenfree = <img src={gluten} className="gluten_icon" alt="contains gluten" width="20" height="20"/>
-    const default_plate = <img src={plate} className="default_image" alt="default plate" width="150" height="125" />
+    const default_plate = <img src={plate} className="default_image" alt="default plate" width="100" height="80" />
 
     useEffect(() => {
         setMealChange(() => mealAmount);
