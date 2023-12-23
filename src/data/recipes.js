@@ -1,15 +1,15 @@
 const recipes = {
     "Chicken Pathia": [
         ['dinner', 4, 'indian', 'spicy'],
-        ["ghee", 2, 'dairy', 'tbsp'],
+        ["ghee", 3, 'dairy', 'tbsp'],
         ["chicken", 3, 'meat', 'breasts'],
         ["onion", 3, "veg", 'whole'],
-        ["garlic", 3, 'spices', 'cloves'],
-        ["red chilli", 2, "veg", 'whole'],
+        ["garlic", 7, 'spices', 'cloves'],
+        ["red chilli", 3, "veg", 'whole'],
         ["tomato puree", 1, 'tins', 'tbsp'],
         ["curry powder", 3, 'spices', 'tbsp'],
         ["chopped tomatoes", 1, 'tins', 'tins'],
-        ["brown sugar", 0.5, 'baking', 'tsp'],
+        ["brown sugar", 0.5, 'baking', 'tbsp'],
         ["lime", 0.5, 'veg', 'whole'],
         ["salt", 0.25, 'spices', 'tsp'],
         ["birds eye chillies", 2, 'veg', 'whole'],
@@ -18,7 +18,7 @@ const recipes = {
     ],
     "Lentil Curry": [
         ['dinner', 6, 'indian', 'spicy', 'nuts'],
-        ["red lentils", 500, 'tins', 'grams'],
+        ["red lentils", 1, 'tins', 'cups'],
         ["butter", 50, 'dairy', 'grams'],
         ["garlic", 4, 'spices', 'cloves'],
         ["onion", 2, 'veg', 'whole'],
@@ -28,10 +28,10 @@ const recipes = {
         ["turmeric", 0.5, 'spices', 'tsp'],
         ["cayenne", 0.5, 'spices', 'tsp'],
         ["salt", 1.25, 'spices', 'tsp'],
-        ["black pepper", 0.25, 'spices', 'tsp'],
+        ["black pepper", 0.5, 'spices', 'tsp'],
         ["coconut milk", 1, 'tins', 'tins'],
         ["chopped tomatoes", 1, 'tins', 'tins'],
-        ["coriander", 1, 'veg', 'tins'],
+        ["coriander", 1, 'veg', 'handfuls'],
         ["flaked almonds", 2, 'baking', 'tbsp']
     ],
     "Chicken Fajitas": [
@@ -81,13 +81,14 @@ const recipes = {
         ['garlic', 2, 'spices', 'cloves'],
         ['chilli', 1, 'veg', 'whole'],
         ['stock cubes (veg)', 2, 'condiments', 'whole'],
-        ['red lentils', 250, 'tins', 'grams']
+        ['red lentils', 250, 'tins', 'grams'],
+        ['coriander', 1, 'veg', 'handfuls']
     ],
     "Broccoli & Stilton soup": [
         ['lunch', 4, 'english'],
-        ["olive oil", 0.33, 'condiments', 'tbsp'],
-        ['onion', 2, 'veg', 'whole'],
-        ['potato', 2, 'veg', 'whole'],
+        ["olive oil", 0.5, 'condiments', 'tsp'],
+        ['onion', 150, 'veg', 'grams'],
+        ['potato', 275, 'veg', 'grams'],
         ['stock cube (veg)', 2, 'condiments', 'whole'],
         ['broccoli', 300, 'veg', 'grams'],
         ['stilton', 100, 'dairy', 'grams']
@@ -101,13 +102,13 @@ const recipes = {
         ['cucumber', 0.25, 'veg', 'whole'],
         ['chorizo', 50, 'meat', 'grams'],
         ['feta', 50, 'dairy', 'grams'],
-        ['pine nut', 2, 'baking', 'grams']
+        ['pine nut', 2, 'baking', 'tbsp']
     ],
     'Thukpa': [
-        ['lunch', 6, 'indian', 'spicy'],
+        ['lunch', 4, 'indian', 'spicy'],
         ['onion', 1, 'veg', 'whole'],
         ['garlic', 2, 'spices', 'cloves'],
-        ['ginger', 0.33, 'spices', 'tbsp'],
+        ['ginger', 1, 'spices', 'tsp'],
         ['cumin', 1, 'spices', 'tsp'],
         ['turmeric', 0.5, 'spices', 'tsp'],
         ['szechuan pepper', 0.25, 'spices', 'tsp'],
@@ -128,10 +129,10 @@ const recipes = {
     ],
     'Stilton Mushrooms': [
         ['lunch', 2, 'english', 'gluten'],
-        ['unsalted butter', 10, 'dairy', 'grams'],
+        ['unsalted butter', 1, 'dairy', 'tbsp'],
         ['mushrooms', 225, 'veg', 'grams'],
         ['garlic', 3, 'spices', 'cloves'],
-        ['double cream', 80, 'dairy', 'ml'],
+        ['double cream', 0.33, 'dairy', 'cups'],
         ['stilton', 225, 'dairy', 'grams'],
         ['nice bread', 1, 'bakery', 'stick']
     ],
@@ -168,7 +169,7 @@ const recipes = {
     ],
     'Gambas Pil Pil': [
         ['lunch', 2, 'spanish', 'spicy', 'gluten'],
-        ['olive oil', 6, 'condiments', 'tbsp'],
+        ['olive oil', 90, 'condiments', 'ml'],
         ['raw king prawns', 180, 'meat', 'grams'],
         ['garlic', 4, 'spices', 'grams'],
         ['red chilli', 1, 'veg', 'whole'],
@@ -198,7 +199,7 @@ const recipes = {
         ['ketchup', 0.5, 'condiments', 'cups'],
         ['pork mince', 500, 'meat', 'grams'],
         ['wholewheat tortillas', 8, 'bakery', 'whole'],
-        ["red onion", 2, 'veg', 'whole'],
+        ["red onion", 1, 'veg', 'whole'],
         ["cherry tomatoes", 6, "veg", 'whole'],
         ["coriander", 2, 'veg', 'handfuls'],
         ["greek yoghurt", 8, 'dairy', 'tbsp'],
@@ -211,7 +212,8 @@ const recipes = {
     'BBQ Brisket': [
         ['dinner', 6, 'american'],
         ['olive oil', 1, 'condiments', 'tbsp'],
-        ['brown sugar', 28, 'baking', 'tsp'],
+        ['brown sugar', 1, 'baking', 'tbsp'],
+        ['brown sugar', 0.5, 'baking', 'cups'],
         ['paprika', 2, 'spices', 'tsp'],
         ['onion powder', 3, 'spices', 'tsp'],
         ['garlic powder', 1, 'spices', 'tsp'],
@@ -280,7 +282,7 @@ const recipes = {
         ['chicken', 1500, 'meat', 'grams'],
         ['onion', 1, 'veg', 'whole'],
         ['lemon', 1, 'veg', 'whole'],
-        ['butter', 50, 'dairy', 'grams'],
+        ['butter', 3, 'dairy', 'tbsp'],
         ['fresh thyme', 3, 'spices', 'tsp'],
         ['fresh sage', 3, 'spices', 'tsp'],
         ['garlic powder', 3, 'spices', 'tsp'],
@@ -320,7 +322,7 @@ const recipes = {
         ['sugar', 1.5, 'baking', 'tsp'],
         ['carrot', 500, 'veg', 'grams'],
         ['small potato', 450, 'veg', 'grams'],
-        ['frsh parsley', 2, 'veg', 'tbsp']
+        ['fresh parsley', 2, 'veg', 'tbsp']
     ],
     'Sausage Casserole': [
         ['dinner', 4, 'english', 'gluten'],
@@ -434,7 +436,7 @@ const recipes = {
         ['chicken', 3, 'meat', 'breasts'],
         ['greek yoghurt', 120, 'dairy', 'grams'],
         ['garlic', 2, 'spices', 'cloves'],
-        ['lemon juice', 3, 'condiments', 'tbsp'],
+        ['lemon juice', 0.5, 'condiments', 'whole'],
         ['coriander', 1, 'spices', 'tsp'],
         ['turmeric', 0.5, 'spices', 'tsp'],
         ['cumin', 0.5, 'spices', 'tsp'],
@@ -546,7 +548,7 @@ const recipes = {
         ['hendersons', 1, 'condiments', 'tsp']
     ],
     'Bulgogi': [
-        ['dinner', 2, 'korean', 'spicy', 'gluten'],
+        ['lunch', 2, 'korean', 'spicy', 'gluten'],
         ['sirloin steak', 450, 'meat', 'grams'],
         ['light soy sauce', 2, 'condiments', 'tbsp'],
         ['honey', 4, 'baking', 'tsp'],
@@ -623,6 +625,18 @@ const recipes = {
         ['dried chilli', 0.5, 'spices', 'tsp'],
         ['salt', 0.75, 'spices', 'tsp'],
         ['black pepper', 0.5, 'spices', 'tsp']
+    ],
+    'Sauerkraut Soup': [
+        ['lunch', 4, 'german'],
+        ['onion', 2, 'veg', 'whole'],
+        ['garlic', 2, 'spices', 'cloves'],
+        ['potato', 1, 'veg', 'medium large'],
+        ['pancetta', 140, 'meat', 'grams'],
+        ['tomato puree', 2, 'condiments', 'tbsp'],
+        ['paprika', 2, 'spices', 'tsp'],
+        ['sauerkraut', 4, 'tins', 'cups'],
+        ['stock cube (vegetable)', 2, 'condiments', 'whole'],
+        ['sour cream', 3, 'dairy', 'tbsp']
     ]
 }
 
