@@ -630,7 +630,7 @@ const recipes = {
         ['lunch', 4, 'german'],
         ['onion', 2, 'veg', 'whole'],
         ['garlic', 2, 'spices', 'cloves'],
-        ['potato', 1, 'veg', 'medium large'],
+        ['potato', 300, 'veg', 'grams'],
         ['pancetta', 140, 'meat', 'grams'],
         ['tomato puree', 2, 'condiments', 'tbsp'],
         ['paprika', 2, 'spices', 'tsp'],
