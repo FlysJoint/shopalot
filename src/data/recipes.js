@@ -87,7 +87,7 @@ const recipes = {
     "Broccoli & Stilton soup": [
         ['lunch', 4, 'english'],
         ["olive oil", 0.5, 'condiments', 'tsp'],
-        ['onion', 150, 'veg', 'grams'],
+        ['onion', 1, 'veg', 'whole'],
         ['potato', 275, 'veg', 'grams'],
         ['stock cube (veg)', 2, 'condiments', 'whole'],
         ['broccoli', 300, 'veg', 'grams'],
@@ -417,7 +417,7 @@ const recipes = {
         ['dinner', 8, 'indian', 'spicy'],
         ['beef chuck', 1000, 'meat', 'grams'],
         ['ghee', 2, 'dairy', 'tbsp'],
-        ['onion', 2, 'veg', 'cups'],
+        ['onion', 2, 'veg', 'whole'],
         ['ginger', 6, 'veg', 'tsp'],
         ['garlic', 6, 'spices', 'tsp'],
         ['yoghurt', 1, 'dairy', 'cups'],
